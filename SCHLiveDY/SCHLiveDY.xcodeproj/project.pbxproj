@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		27A93BA22019CB5000D021E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A93BA12019CB5000D021E9 /* AppDelegate.swift */; };
-		27A93BA42019CB5000D021E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A93BA32019CB5000D021E9 /* ViewController.swift */; };
 		27A93BA72019CB5000D021E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A93BA52019CB5000D021E9 /* Main.storyboard */; };
 		27A93BA92019CB5000D021E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A93BA82019CB5000D021E9 /* Assets.xcassets */; };
 		27A93BAC2019CB5000D021E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A93BAA2019CB5000D021E9 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		27A93B9E2019CB5000D021E9 /* SCHLiveDY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCHLiveDY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A93BA12019CB5000D021E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27A93BA32019CB5000D021E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27A93BA62019CB5000D021E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27A93BA82019CB5000D021E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A93BAB2019CB5000D021E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +95,8 @@
 		27A93BA02019CB5000D021E9 /* SCHLiveDY */ = {
 			isa = PBXGroup;
 			children = (
+				27A93BCF2019CD9F00D021E9 /* Classes */,
 				27A93BA12019CB5000D021E9 /* AppDelegate.swift */,
-				27A93BA32019CB5000D021E9 /* ViewController.swift */,
 				27A93BA52019CB5000D021E9 /* Main.storyboard */,
 				27A93BA82019CB5000D021E9 /* Assets.xcassets */,
 				27A93BAA2019CB5000D021E9 /* LaunchScreen.storyboard */,
@@ -123,6 +121,61 @@
 				27A93BC32019CB5000D021E9 /* Info.plist */,
 			);
 			path = SCHLiveDYUITests;
+			sourceTree = "<group>";
+		};
+		27A93BCF2019CD9F00D021E9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27A93BD02019CD9F00D021E9 /* Home */,
+				27A93BD12019CD9F00D021E9 /* Follow */,
+				27A93BD22019CD9F00D021E9 /* Toos */,
+				27A93BD32019CD9F00D021E9 /* Profile */,
+				27A93BD42019CD9F00D021E9 /* Live */,
+				27A93BD52019CD9F00D021E9 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		27A93BD02019CD9F00D021E9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		27A93BD12019CD9F00D021E9 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		27A93BD22019CD9F00D021E9 /* Toos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toos;
+			sourceTree = "<group>";
+		};
+		27A93BD32019CD9F00D021E9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		27A93BD42019CD9F00D021E9 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		27A93BD52019CD9F00D021E9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A93BA42019CB5000D021E9 /* ViewController.swift in Sources */,
 				27A93BA22019CB5000D021E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,13 +478,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SCHLiveDY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SCHMike.SCHLiveDY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -440,13 +494,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SCHLiveDY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SCHMike.SCHLiveDY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
