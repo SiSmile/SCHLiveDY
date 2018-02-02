@@ -1,25 +1,27 @@
 //
-//  UIBarButtonItem.swift
+//  Common-Extension.swift
 //  SCHLiveDY
 //
-//  Created by Mike on 2018/2/1.
+//  Created by Mike on 2018/2/2.
 //  Copyright © 2018年 Mike. All rights reserved.
 //
 
 import UIKit
+
+// MARK --- 扩展UIBarButtonItem
 extension UIBarButtonItem {
     
     /*
-    class func createItem(imageName:String,highImageName:String,size:CGSize) -> UIBarButtonItem{
-        
-        let size = CGSize(width:40,height:40)
-        let btn = UIButton()
-        btn.setImage(UIImage(named:imageName), for: UIControlState.normal)
-        btn.setImage(UIImage(named:highImageName), for: UIControlState.highlighted)
-        btn.frame = CGRect.init(origin:CGPoint.init(x: 0, y: 0), size: size)
-        return UIBarButtonItem.init(customView: btn)
-    }
- */
+     class func createItem(imageName:String,highImageName:String,size:CGSize) -> UIBarButtonItem{
+     
+     let size = CGSize(width:40,height:40)
+     let btn = UIButton()
+     btn.setImage(UIImage(named:imageName), for: UIControlState.normal)
+     btn.setImage(UIImage(named:highImageName), for: UIControlState.highlighted)
+     btn.frame = CGRect.init(origin:CGPoint.init(x: 0, y: 0), size: size)
+     return UIBarButtonItem.init(customView: btn)
+     }
+     */
     //swift跟推荐使用构造函数
     //便利构造函数：1.必须以convenience开头 2.在构造函数中必须明确调用一个设计的构造函数self
     // = ：代表可有可无  相传就传不想传就不传
@@ -45,3 +47,12 @@ extension UIBarButtonItem {
         self.init(customView: btn)
     }
 }
+
+// MARK --- 扩展UIColor
+extension UIColor {
+    convenience init(r:CGFloat,g:CGFloat,b:CGFloat) {
+        
+        self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
+    }
+}
+
