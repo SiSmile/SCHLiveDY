@@ -20,6 +20,7 @@
 		27BABB8B2019D6DD004CB342 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BABB8A2019D6DD004CB342 /* Follow.storyboard */; };
 		27BABB8D2019D71F004CB342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BABB8C2019D71F004CB342 /* Main.storyboard */; };
 		27BABB912019D86B004CB342 /* SCHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BABB902019D86B004CB342 /* SCHMainViewController.swift */; };
+		27E67C23202BF4D800D82F7E /* SCHRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E67C22202BF4D800D82F7E /* SCHRecommendViewController.swift */; };
 		27E92EFE20243B2A00F6BA68 /* SCHPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E92EFD20243B2A00F6BA68 /* SCHPageContentView.swift */; };
 		27E92F002024418900F6BA68 /* Common-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E92EFF2024418900F6BA68 /* Common-Extension.swift */; };
 		27F7414F2019D43000DC3968 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F7414E2019D43000DC3968 /* Live.storyboard */; };
@@ -62,6 +63,7 @@
 		27BABB8A2019D6DD004CB342 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		27BABB8C2019D71F004CB342 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		27BABB902019D86B004CB342 /* SCHMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCHMainViewController.swift; sourceTree = "<group>"; };
+		27E67C22202BF4D800D82F7E /* SCHRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCHRecommendViewController.swift; sourceTree = "<group>"; };
 		27E92EFD20243B2A00F6BA68 /* SCHPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCHPageContentView.swift; sourceTree = "<group>"; };
 		27E92EFF2024418900F6BA68 /* Common-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common-Extension.swift"; sourceTree = "<group>"; };
 		27F7414E2019D43000DC3968 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				27877FF42022ED2E0023ECDE /* SCHHomeViewController.swift */,
+				27E67C22202BF4D800D82F7E /* SCHRecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				27E92EFE20243B2A00F6BA68 /* SCHPageContentView.swift in Sources */,
 				27BABB912019D86B004CB342 /* SCHMainViewController.swift in Sources */,
 				27877FFB202302050023ECDE /* SCHPageTitleView.swift in Sources */,
+				27E67C23202BF4D800D82F7E /* SCHRecommendViewController.swift in Sources */,
 				27E92F002024418900F6BA68 /* Common-Extension.swift in Sources */,
 				27A93BA22019CB5000D021E9 /* AppDelegate.swift in Sources */,
 				2730416E20230592005EC3AD /* SCHCommon.swift in Sources */,

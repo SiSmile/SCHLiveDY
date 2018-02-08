@@ -9,6 +9,7 @@
 import UIKit
 let SCHStatusBarH:CGFloat = 20
 let SCHNavigationBarH:CGFloat = 44
+let SCHTabBarH:CGFloat = 49
 
 let SCHKscreenW:CGFloat = UIScreen.main.bounds.width
 let SCHKscreenH:CGFloat = UIScreen.main.bounds.height

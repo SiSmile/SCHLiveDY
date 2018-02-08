@@ -16,7 +16,7 @@ private let ContentCellId = "ContentCollectionCell"
 class SCHPageContentView: UIView {
 
     //Mark -- 定义属性
-    private var childNumber:Int
+//    private var childVCs = [UIViewController]()
     private weak var parentViewController:UIViewController? = UIViewController()
     private var childVCs:[UIViewController] = []
     private var startOffsetX:CGFloat = 0
@@ -42,8 +42,8 @@ class SCHPageContentView: UIView {
     }()
     
     //Mark -- 构造函数
-    init(frame:CGRect,childNumber:Int,parentViewController:UIViewController?) {
-        self.childNumber = childNumber
+    init(frame:CGRect,childVCs:[UIViewController],parentViewController:UIViewController?) {
+        self.childVCs = childVCs
         self.parentViewController = parentViewController
         
         super.init(frame: frame)
@@ -61,14 +61,11 @@ class SCHPageContentView: UIView {
 extension SCHPageContentView {
     
     private func setUIContentView() {
-        //1.添加到父控制器上
-        for _ in 0..<self.childNumber {
-            let vc:UIViewController = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVCs.append(vc)
-            
-            parentViewController?.addChildViewController(vc)
+        //1.子控制器添加到父控制器上
+        for childvc in childVCs{
+            parentViewController?.addChildViewController(childvc)
         }
+        
         
         //2.添加到collectionCell
         addSubview(collectionView)
@@ -162,11 +159,6 @@ extension SCHPageContentView:UICollectionViewDelegate {
                 sourceIndex = childVCs.count - 1
             }
             
-//            //4. 滑动完成
-//            if currentOffsetX - startOffsetX == scrollViewW {
-//                progress = 1
-//                sourceIndex = targetIndex
-//            }
         }
         
         //3. 将 获取滑动进度、原来的index（改变label的颜色）、目标的index 传给titleView

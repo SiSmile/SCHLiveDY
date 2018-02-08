@@ -22,9 +22,19 @@ class SCHHomeViewController: UIViewController {
 
     //MARK --- 懒加载pageContentView
     private lazy var pageContentView:SCHPageContentView = {[weak self] in
-        let contentFrameH = SCHKscreenH - SCHStatusBarH-SCHNavigationBarH-HPageTitleH
+        //位置
+        let contentFrameH = SCHKscreenH - SCHStatusBarH-SCHNavigationBarH-HPageTitleH-SCHTabBarH
         let contentFrame = CGRect(x: 0, y: SCHStatusBarH+SCHNavigationBarH+HPageTitleH, width: SCHKscreenW, height: contentFrameH)
-        let pageContentView = SCHPageContentView(frame: contentFrame, childNumber: pageTitleArr.count, parentViewController: self)
+        //子控制器
+        var childVCs = [UIViewController]()
+        childVCs.append(SCHRecommendViewController())
+        for _ in 0..<3 {
+            let vc:UIViewController = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVCs.append(vc)
+        }
+        
+        let pageContentView =  SCHPageContentView(frame: contentFrame, childVCs: childVCs, parentViewController: self)
         pageContentView.delegate = self
         return pageContentView
     }()
